@@ -1,0 +1,33 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "447a90f70ac9dadfb2008aa620606f77"
+name = "first-pokedex-app"
+handle = "first-pokedex-app"
+application_url = "https://con-deeper-nelson-skirt.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "test-boutique9999.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://con-deeper-nelson-skirt.trycloudflare.com/auth/callback",
+  "https://con-deeper-nelson-skirt.trycloudflare.com/auth/shopify/callback",
+  "https://con-deeper-nelson-skirt.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks"
+
+[pos]
+embedded = false
