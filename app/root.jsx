@@ -5,8 +5,9 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import Cards from './client/components/Cards';
-import Pokemon from "./client/components/Pokemon";
+import Liste from "./client/components/Liste";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 export default function App() {
   return (
@@ -23,10 +24,12 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
-        <ScrollRestoration />
-        <Cards />
-        <Scripts />
+        <Provider store={store}>
+          <Outlet />
+          <ScrollRestoration />
+          <Liste />
+        </Provider>
+          <Scripts />
       </body>
     </html>
   );

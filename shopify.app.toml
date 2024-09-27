@@ -3,7 +3,7 @@
 client_id = "447a90f70ac9dadfb2008aa620606f77"
 name = "first-pokedex-app"
 handle = "first-pokedex-app"
-application_url = "https://karaoke-hl-independently-bare.trycloudflare.com"
+application_url = "https://proceed-experimental-keeps-movement.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://karaoke-hl-independently-bare.trycloudflare.com/auth/callback",
-  "https://karaoke-hl-independently-bare.trycloudflare.com/auth/shopify/callback",
-  "https://karaoke-hl-independently-bare.trycloudflare.com/api/auth/callback"
+  "https://proceed-experimental-keeps-movement.trycloudflare.com/auth/callback",
+  "https://proceed-experimental-keeps-movement.trycloudflare.com/auth/shopify/callback",
+  "https://proceed-experimental-keeps-movement.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

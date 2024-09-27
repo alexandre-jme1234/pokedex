@@ -1,8 +1,9 @@
 import React, {useEffect, useState } from "react";
 import Pokemon from "./Pokemon";
+import '../../styles/cardsStyles.css';
 
 
-function Cards() {
+function Liste() {
     const [data, setData] = useState([]);
 
 
@@ -26,15 +27,17 @@ function Cards() {
 
     return (
 
-        <section>
+        <section className="pokemon-list">
             <h1>Liste des pokemon</h1>
-            <div>
+            <div className="pokemon-container">
                 {data.map((pokemon, index) => (
+                    <div key={index} className="pokemon-card">
                     <Pokemon name={pokemon.name} url={pokemon.url}/>
+                    </div>
                 ))}
             </div>
         </section>
     )
 }
 
-export default Cards;
+export default Liste;
