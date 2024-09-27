@@ -5,6 +5,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import Cards from './client/components/Cards';
+import Pokemon from "./client/components/Pokemon";
 
 export default function App() {
   return (
@@ -23,6 +25,7 @@ export default function App() {
       <body>
         <Outlet />
         <ScrollRestoration />
+        <Cards />
         <Scripts />
       </body>
     </html>
